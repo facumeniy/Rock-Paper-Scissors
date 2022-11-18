@@ -98,3 +98,7 @@ body{
     background-position: center;
     background-color: blue;
 }
+.disabledButton{
+    cursor: auto;
+    opacity: 0.4;
+}

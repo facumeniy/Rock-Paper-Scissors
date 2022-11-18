@@ -5,22 +5,18 @@ const scrBtn = document.querySelector("#scissors-button");
 const textDisplay = document.querySelector("#text");
 const playerDisplay = document.querySelector("#fp-score");
 const pcDisplay = document.querySelector("#pc-score");
+const allBtn = document.querySelectorAll(".button");
 
 let playerScore = parseInt(playerDisplay.textContent);
 let pcScore = parseInt(pcDisplay.textContent);
 
-let isGameOver = false;
+const winningScore = 5;
 
 
 function getComputerChoice(){
     return computerChoices[Math.floor(Math.random() * computerChoices.length)]; 
 }
 
-function checkWin(firstScore, secondScore){
-    if(firstScore === 5 || secondScore === 5){
-        isGameOver = true;
-    }
-}
 
 function playRound(playerChoice, pcChoice){
     if(playerChoice === 'ROCK'){
@@ -31,7 +27,7 @@ function playRound(playerChoice, pcChoice){
         }else if(pcChoice === 'scissors'){
             textDisplay.textContent = "You win! Rock beats Scissors";
             playerScore++;
-            playerDisplay.textContent = pcScore;
+            playerDisplay.textContent = playerScore;
         }else{
             textDisplay.textContent = "Draw";
         }
@@ -39,7 +35,7 @@ function playRound(playerChoice, pcChoice){
         if(pcChoice === 'rock'){
             textDisplay.textContent = "You win! Paper beats Rock";
             playerScore++;
-            playerDisplay.textContent = pcScore;
+            playerDisplay.textContent = playerScore;
         }else if(pcChoice === 'scissors'){
             textDisplay.textContent = "You lost. Scissors beats Paper";
             pcScore++;
@@ -55,7 +51,7 @@ function playRound(playerChoice, pcChoice){
         }else if(pcChoice === 'paper'){
             textDisplay.textContent = "You win! Scissors beats Paper";
             playerScore++;
-            playerDisplay.textContent = pcScore;
+            playerDisplay.textContent = playerScore;
         }else{
             textDisplay.textContent = "Draw";
         }
