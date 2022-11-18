@@ -1,21 +1,41 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 body{
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    background-color: #0f4c5c;
+    background-color: #ffffff;
+}
+.main-pannel{
+    width: 700px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 3px solid white;
 }
 .gameboard{
     width: 700px;
     height: 700px;
+    min-width: 700px;
+    min-height: 700px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border: 5px solid red;
+}
+.main-pannel-buttons{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lightseagreen;
 }
 .scoreboard{
     width: 100%;
@@ -33,6 +53,14 @@ body{
     justify-content: center;
     align-items: center;
     border: 1px solid black;
+}
+.name-display{
+    height: 100%;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
 }
 .scoreboard-item{
     width: 125px;
@@ -71,34 +99,100 @@ body{
     height: 200px;
     width: 200px;
     cursor: pointer;
+    border: 5px solid black;
     border-radius: 50%;
-    transition: all 0.2s;
+    transition: all 0.5s;
 }
 .button:hover{
-    box-shadow: -1px -1px 20px 13px rgba(0,0,0,0.5);
--webkit-box-shadow: -1px -1px 20px 13px rgba(0,0,0,0.5);
--moz-box-shadow: -1px -1px 20px 13px rgba(0,0,0,0.5);
     transform: scale(1.05);
+}
+.pc-select{
+    box-shadow: 1px 0px 16px 16px rgba(235,63,63,1);
+-webkit-box-shadow: 1px 0px 16px 16px rgba(235,63,63,1);
+-moz-box-shadow: 1px 0px 16px 16px rgba(235,63,63,1);
+}
+.player-select{
+    box-shadow: 1px 0px 16px 16px rgba(63,121,235,1);
+-webkit-box-shadow: 1px 0px 16px 16px rgba(63,121,235,1);
+-moz-box-shadow: 1px 0px 16px 16px rgba(63,121,235,1);
+}
+.win-select{
+    box-shadow: 1px 0px 16px 11px rgba(95,252,144,1);
+-webkit-box-shadow: 1px 0px 16px 11px rgba(95,252,144,1);
+-moz-box-shadow: 1px 0px 16px 11px rgba(95,252,144,1);
+}
+.draw{
+    box-shadow: 0px 0px 27px 0px rgba(133,54,181,1);
+    -webkit-box-shadow: 0px 0px 27px 0px rgba(133,54,181,1);
+    -moz-box-shadow: 0px 0px 27px 0px rgba(133,54,181,1);
+}
+.winner{
+    color: #39d47a;
+}
+.loser{
+    color: #d80032;
 }
 #rock-button{
     background-image: url(/images/rock.png);
     background-size: 200px;
     background-position: center;
-    background-color: red;
+    background-color: #d80032;
 }
 #paper-button{
     background-image: url(/images/paper.png);
     background-size: 200px;
     background-position: center;
-    background-color: yellow;
+    background-color: #ffb700;
 }
 #scissors-button{
     background-image: url(/images/scissors.png);
     background-size: 200px;
     background-position: center;
-    background-color: blue;
+    background-color: #118ab2;
 }
 .disabledButton{
     cursor: auto;
     opacity: 0.4;
+}
+.pannel{
+    height: 100%;
+    width: 500px;
+    margin: 0 50px;
+    border: 1px solid white;
+}
+.left-pannel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title-container{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid red;
+}
+.rock-title{
+    font-size: 80px;
+    color: #d80032;
+}
+.paper-title{
+    font-size: 80px;
+    color: #ffb700;
+}
+.scr-title{
+    font-size: 80px;
+    color: #118ab2;
+}
+#reset-button{
+    width: 150px;
+    height: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
 }

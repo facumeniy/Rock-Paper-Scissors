@@ -7,30 +7,51 @@
     <title>Document</title>
     <!--CSS-->
     <link rel="stylesheet" href="main.css">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">   
 </head>
 <body>
-    <div class="gameboard">
-        <div class="top-buttons">
-            <button class="button" id="paper-button"></button>
-        </div>
-        <div class="scoreboard">
-            <div class="counter">
-                <div class="player-count scoreboard-item">
-                    <h2 id="fp-score">0</h2>
+    <div class="left-pannel pannel">
+        <div class="title-container"><h1 class="rock-title">Rock!</h1></div>
+        <div class="title-container"><h1 class="paper-title">Paper!</h1></div>
+        <div class="title-container"><h1 class="scr-title">Scissors!</h1></div>
+    </div>
+    <div class="main-pannel">
+        <div class="gameboard">
+            <div class="top-buttons">
+                <button class="button" id="paper-button"></button>
+            </div>
+            <div class="scoreboard">
+                <div class="counter">
+                    <div class="player-name name-display">
+                        <h2 id="pl-name">Player</h2>
+                    </div>
+                    <div class="player-count scoreboard-item">
+                        <h2 id="fp-score">0</h2>
+                    </div>
+                    <div class="pc-count scoreboard-item">
+                        <h2 id="pc-score">0</h2>
+                    </div>
+                    <div class="pc-name name-display">
+                        <h2 id="pl2-name">PC</h2>
+                    </div>
                 </div>
-                <div class="pc-count scoreboard-item">
-                    <h2 id="pc-score">0</h2>
+                <div class="text-display">
+                    <h3 id="text">placeholder</h3>
                 </div>
             </div>
-            <div class="text-display">
-                <h3 id="text">placeholder</h3>
+            <div class="bottom-buttons">
+                <button class="button" id="rock-button"></button>
+                <button class="button" id="scissors-button"></button>
             </div>
         </div>
-        <div class="bottom-buttons">
-            <button class="button" id="rock-button"></button>
-            <button class="button" id="scissors-button"></button>
+        <div class="main-pannel-buttons">
+            <button id="reset-button">New game</button>
         </div>
     </div>
+    <div class="right-pannel pannel"></div>
     
     <script src="app.js"></script>
 </body>
