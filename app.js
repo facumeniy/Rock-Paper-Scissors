@@ -25,8 +25,8 @@ function getComputerChoice(){
 function playRound(playerChoice, pcChoice){
     if(playerChoice === 'ROCK'){
         if(pcChoice === 'paper'){
-            paperBtn.classList.add("pc-select");
-            rockBtn.classList.add("player-select");
+            paperBtn.classList.add("win-select");
+            rockBtn.classList.add("pc-select");
             textDisplay.textContent = "You lost. Paper beats Rock";
             pcScore++;
             pcDisplay.textContent = pcScore;
@@ -48,8 +48,8 @@ function playRound(playerChoice, pcChoice){
             playerScore++;
             playerDisplay.textContent = playerScore;
         }else if(pcChoice === 'scissors'){
-            scrBtn.classList.add("pc-select");
-            paperBtn.classList.add("player-select");
+            scrBtn.classList.add("win-select");
+            paperBtn.classList.add("pc-select");
             textDisplay.textContent = "You lost. Scissors beats Paper";
             pcScore++;
             pcDisplay.textContent = pcScore;
@@ -59,8 +59,8 @@ function playRound(playerChoice, pcChoice){
         }
     }else if(playerChoice === 'SCISSORS'){
         if(pcChoice === 'rock'){
-            rockBtn.classList.add("pc-select");
-            scrBtn.classList.add("player-select");
+            rockBtn.classList.add("win-select");
+            scrBtn.classList.add("pc-select");
             textDisplay.textContent = "You lost. Rock beats Scissors";
             pcScore++;
             pcDisplay.textContent = pcScore;
@@ -140,7 +140,7 @@ resetBtn.addEventListener('click', function(){
     pcScore = 0;
     playerDisplay.textContent = 0;
     pcDisplay.textContent = 0;
-    textDisplay.textContent = "New game"
+    textDisplay.textContent = "Choose Rock, Paper or Scissors";
     playerDisplay.classList.remove("winner");
     pcDisplay.classList.remove("winner");
     playerDisplay.classList.remove("loser");
