@@ -137,19 +137,19 @@ body{
     color: #d80032;
 }
 #rock-button{
-    background-image: url(/images/rock.png);
+    background-image: url(https://facumeniy.github.io/Rock-Paper-Scissors/images/rock.png);
     background-size: 170px;
     background-position: center;
     background-color: #d80032;
 }
 #paper-button{
-    background-image: url(/images/paper.png);
+    background-image: url(https://facumeniy.github.io/Rock-Paper-Scissors/images/paper.png);
     background-size: 200px;
     background-position: center;
     background-color: #ffb700;
 }
 #scissors-button{
-    background-image: url(/images/scissors.png);
+    background-image: url(https://facumeniy.github.io/Rock-Paper-Scissors/images/scr.png);
     background-size: 230px;
     background-position: center;
     background-color: #118ab2;
